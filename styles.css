@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #090808;
+    color: #fff;
+}
+
+header{
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 24px 14%;
+   
+}
+a{
+    text-decoration: none;
+}
+
+.logo {
+
+    color:#8080FF;
+    font-family: 'Notable';
+    font-weight: 1000;
+    font-size:4rem;
+    
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    
+}
+
+.navbar a{
+
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    font-weight: 300;
+}
+
+.navbar a:hover{
+
+    background: #8080FF;
+    transition: 3s;
+}
+
+/*---------------HOME-----------------*/
+
+section{
+
+    padding: 140px 14%;
+}
+
+
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 6rem;
+    align-items: center;
+    
+}
+
+.home-img img{
+
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+}
+
+.home-text h1{
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 20px;
+    font-size:xx-large;
+}
+
+
+.home-text h3{
+
+  font-weight: 500; 
+  margin: 0 0 20px; 
+  font-size: x-large;
+}
+
+.home-text p{
+
+    max-width: 470px;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn{
+    background: #8080FF;
+    color: #fff;
+    box-shadow: 4px 4px;
+    padding: 0 25px;
+    line-height: 42px;
+    display: inline-block;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: ease all 0.35s;
+
+}
+
+.btn:hover{
+    background: #fff;
+    color: #8080FF;
+    box-shadow:4px 4px ;
+}
