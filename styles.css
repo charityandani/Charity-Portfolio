@@ -129,3 +129,77 @@ section{
     color: #8080FF;
     box-shadow:4px 4px ;
 }
+
+span{
+    color: #8080FF;
+}
+
+.about{
+
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 5rem;
+    align-items: centre;
+    
+}
+
+.about-text h1{
+
+    padding-left: 150px;
+    color: #8080FF;
+}
+
+.about-text p{
+
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.qualification{
+
+    padding-left: 150px;
+}
+
+.qualification-tabs{
+
+display: flex;
+justify-content:space-between;
+margin-bottom: 20px;
+padding-top: 30px;
+
+
+
+}
+
+.qualification-button-flex{
+
+    font-size: x-large;
+    font-weight: 500; 
+    cursor: pointer;
+
+
+}
+
+.qualification-button-flex:hover{
+
+    color: #8080FF;
+
+}
+
+.fa-graduation-cap{
+
+    font-size: 1.8rem;
+    margin-right:70px;
+}
+
+.fa-solid{
+    color: #8080FF;
+    
+}
+
+.about-img img{
+
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+}
