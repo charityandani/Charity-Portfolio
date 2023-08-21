@@ -68,11 +68,7 @@ a{
 
 /*---------------HOME-----------------*/
 
-section{
 
-    padding: 140px 14%;
-    
-}
 
 
 
@@ -84,6 +80,8 @@ section{
     grid-template-columns: repeat(2,1fr);
     grid-gap: 6rem;
     align-items: center;
+    padding: 140px 14% ;
+    
     
 }
 
@@ -148,6 +146,10 @@ span{
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 5rem;
     align-items: centre;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-bottom: 50px;
+    padding-top: 100px;
     
 }
 
@@ -165,16 +167,17 @@ span{
 
 .qualification{
 
-    padding-left: 150px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .section-title{
-    margin-left: 300px;
+    margin-left: 450px;
 }
 
 .section-subtitle{
 
-    margin-left: 300px;
+    margin-left: 450px;
 }
 
 .qualification-tabs{
@@ -183,6 +186,8 @@ display: flex;
 justify-content:space-between;
 margin-bottom: 20px;
 padding-top: 30px;
+padding-left: 100px;
+padding-right: 100px;
 
 
 
@@ -332,17 +337,70 @@ padding-top: 30px;
     left: -20px;
 }
 
-.card{
-    position: relative;
-    width:320px;
-    height:320px;
-    margin: 20px;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 
+@media screen and (max-width:600px){
+
+    .timeline{
+        margin:50px auto;
+    }
+
+    .timeline::after{
+        left: 31px;
+    }
+
+    .container{
+
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box h4{
+        margin-bottom: 10px;
+    }
+
+    .right-container{
+        left: 0;
+    }
+
+    .left-container .fa-circle , .right-container .fa-circle{
+        left: 20px;
+    }
+
+    
 }
 
-.card .box{
+.skills-content{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    height: 100vh
+    
+    
+}
+
+
+
+
+
+ .skills-content .card{
+    position: relative;
+    width:320px;
+    height:185px;
+    margin: 25px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    padding-right: 200px;
+    
+}
+
+.skills-content .card .box{
     position: absolute;
     top: 0;
     left: 0;
@@ -353,7 +411,12 @@ padding-top: 30px;
 
 }
 
-.card .box .img-box{
+.skills-content .card:hover .box{
+
+    transform: rotateY(180deg);
+}
+
+.skills-content .card .box .img-box{
     position: absolute;
     top: 0;
     left: 0;
@@ -361,11 +424,50 @@ padding-top: 30px;
     height: 100%;
 }
 
-.card .box .img-box img{
+.skills-content .card .box .img-box img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.skills-content .card .content-box{
+
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#8080FF; 
+  backface-visibility: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform:rotateY(180deg)
+}
+
+.skills-content .card .box .content-box div{
+
+    transform-style: preserve-3d;
+    padding: 2px;
+    background: linear-gradient(45deg, #4158d0,#dd7ca6);
+    transform: translateZ(90PX)
+}
+
+.skills- .card .box .content-box div h2{
+
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+.skills- .card .box .content-box div p{
+
+    color:#fff;
+    font-size: 6px;
+    letter-spacing: 1px;
 }
