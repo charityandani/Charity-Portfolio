@@ -97,7 +97,7 @@ a{
 .home-img img{
 
     max-width: 100%;
-    width: 600px;
+    width: 800px;
     height: auto;
 }
 
@@ -155,23 +155,45 @@ span{
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 5rem;
     align-items: centre;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-right: 350px;
+    padding-left: 12px;
     padding-bottom: 50px;
     padding-top: 50px;
+
+    
+}
+
+
+
+.menu-icon{
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
     
 }
 .about img{
-    width: 400px;
+    width: 530px;
     height: auto;
-    padding-left: 50px;
-    padding-right:50px ;
+    padding-right: 150px;
+    
+    
+    
+}
+
+
+.about-text{
+
+    flex-basis:60% ;
 }
 .about-text span{
 
-    padding-left: 150px;
+    
     font-size:x-large;
-    font-weight: 800;
+    
+
+    font-size: 30px; 
+    font-weight: 600;
     
 }
 
@@ -179,7 +201,10 @@ span{
 
     padding-top: 50px;
     padding-bottom: 40px;
+    
 }
+
+
 
 .qualification{
 
@@ -239,12 +264,7 @@ padding-right: 100px;
     
 }
 
-.about-img img{
 
-    max-width: 100%;
-    width: 380px;
-    height: auto;
-}
 
 
 
@@ -357,7 +377,7 @@ padding-right: 100px;
 }
 
 
-@media screen and (max-width:600px){
+/*@media screen and (max-width:600px){
 
     .timeline{
         margin:50px auto;
@@ -391,7 +411,7 @@ padding-right: 100px;
 
     
 }
-
+*/
 
 .skills-section span{
 
@@ -599,7 +619,7 @@ padding-right: 100px;
     }
 }
 
-@media (max-width:768px)
+/*@media (max-width:768px)
 {
     .navbar .bta{
         display: block;
@@ -660,14 +680,209 @@ padding-right: 100px;
         
     }
 
-    .home{
-        padding-top: 350px;
+
+    
+}*/
+
+
+@media (max-width:1430px)
+{
+ header{
+    padding: 25px 3%;
+
+ }
+
+ secttion{
+    padding: 50px 3%;
+ }
+
+ h1{
+    font-size: 3rem;
+ }
+ h3{
+    font-size: 1.2rem;
+ }
+}
+
+@media (max-width:1020px){
+
+    h1{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 0.9rem;
     }
 
-    
-   
+    .home{
+        height:70vh;
+    }
+}
 
 
+@media(max-width: 830px){
 
+    header{
+        padding:18px 3%;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: -500%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background:#090808;
+        box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
+        text-align: left;
+        transform: 0.2s;
+    }
+
+    .navbar a{
+        display: block;
+        padding: 1rem;
+        border-left: 2px solid #8080FF;
+        margin: 1rem;
+        display: block;
+        
+    }
+
+    .navbar .active{
+
+        top:100%
+    }
     
 }
+
+@media (max-width:600px)
+{
+
+    .home{
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        align-items: flex-start;
+        align-items: center;
+        margin-top: 10px;
+        height: 100vh;
+        padding-left: 80px;
+    
+       
+    }
+    .home-text p{
+        max-width: 100%;
+    }
+    
+.home-img img{
+    max-width: 100%;
+  
+}
+
+
+
+.logo{
+
+    font-weight: 400;
+    font-size:2rem;
+}
+
+.about{
+
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 100vh;
+    margin-right: 850px;
+  
+}
+
+.about img{
+
+    
+    width: 440px;
+    height: auto;
+    
+}
+
+.about-text span{
+
+padding-left: 1rem;
+padding-right: 10rem;
+
+font-size:large;
+font-weight: 600;
+}
+
+
+.about-text{
+
+    text-align: center;
+    align-items: center; 
+    
+    
+}
+
+
+
+
+.about-text p{
+    max-width: 65%;
+    font-size: 1rem;
+   
+    
+   
+  
+}
+
+.section-title h2{
+
+    text-align: center;
+    align-items:center;
+    color: chartreuse;
+    
+
+}
+
+
+.timeline{
+    margin:50px auto;
+    
+
+}
+
+.timeline::after{
+    left: 31px;
+}
+
+.container{
+
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+    
+}
+
+.text-box{
+    font-size: 13px;
+}
+.text-box h4{
+    margin-bottom: 10px;
+}
+
+.right-container{
+    left: 0;
+}
+
+.left-container .fa-circle , .right-container .fa-circle{
+    left: 20px;
+}
+
+
+}
+
