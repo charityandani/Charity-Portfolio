@@ -31,7 +31,7 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 24px 4%;
+    padding: 10px 10%;
    
 }
 
@@ -68,9 +68,10 @@ a{
 .navbar  a{
 
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 25px;
     padding: 10px 20px;
     font-weight: 300;
+   
     
 }
 
@@ -154,6 +155,34 @@ span{
     color: #8080FF;
 }
 
+
+
+/*--------------------------new about---------------*/
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+
+.about-col-1 img{
+    width:100%;
+
+}
+
+.about-col-2{
+    flex-basis:50%;
+}
+
+.about-p{
+
+    padding-top: 80px;
+}
 .about{
 
     display: grid;
@@ -175,14 +204,14 @@ span{
     display: none;
     
 }
-.about-img {
+/*.about-img {
     width: 530px;
     height: auto;
     padding-right: 150px;
     
     
     
-}
+}*/
 
 
 .about-text{
@@ -200,12 +229,67 @@ span{
     
 }
 
-.about-text p{
+/*.about-text p{
 
     padding-top: 50px;
     padding-bottom: 40px;
     
+}*/
+
+
+/******new qualification--------------*/
+
+
+.qualification{
+    text-align: center;
 }
+
+.title-heading{
+    padding-bottom: 10px;
+}
+
+
+.edu-work {
+    display: flex;
+}
+
+.eduwork-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 10%;
+    width: 100%;
+    
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-buttons {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+.tab-buttons i {
+    font-size: 40px;
+    margin-right: 120px; /* Shift the icon to the right */
+}
+
+.tab-buttons.right i {
+    margin-right: 0; /* Reset margin for right-aligned icons */
+    margin-left: 80px; /* Shift the icon to the left */
+}
+
+
+.tab-buttons:hover {
+    color: #8080FF; /* Change color on hover */
+    transition: color 0.3s;
+    font-size: 40px;
+}
+
 
 
 
@@ -274,7 +358,7 @@ padding-right: 100px;
 
 .timeline{
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 100px auto;
    
 }
@@ -305,11 +389,11 @@ padding-right: 100px;
     }
 }
 
-.container{
-
-    padding: 10px 50px;
+.work-container {
+   
+    
     position: relative;
-    width: 50%;
+    width: 45%;
     animation: movedown 1s linear forwards;
     opacity: 0;
 
@@ -329,20 +413,20 @@ padding-right: 100px;
     }
 }
 
-.container:nth-child(1){
+.work-container:nth-child(1){
     animation-delay: 0s;
 }
 
 
-.container:nth-child(2){
+.work-container:nth-child(2){
     animation-delay: 1s;
 }
 
-.container:nth-child(3){
+.work-containerr:nth-child(3){
     animation-delay: 2s;
 }
 
-.container:nth-child(4){
+.work-container:nth-child(4){
     animation-delay: 3s;
 }
 
@@ -368,15 +452,15 @@ padding-right: 100px;
 .container .fa-circle{
 
     position: absolute;
-    right: -20px;
+    right: -75px;
     width: 40px;
-    top: 4px;
+    
     border-radius: 50%;
     z-index: 10px;
 }
 
 .right-container .fa-circle{
-    left: -20px;
+    left: -25px;
 }
 
 
@@ -416,32 +500,31 @@ padding-right: 100px;
 }
 */
 
-.skills-section span{
 
-    padding-left: 45%;
-    
-}
-
-.skills-content{
+ .skills-content {
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    height: 100vh;
+    height: 75vh;
+    padding-right: 20px;
+    
+    
     
 }
 
 
  .skills-content .card{
     position: relative;
-    width:320px;
+    width:290px;
     height:185px;
     margin: 25px;
     transform-style: preserve-3d;
     perspective: 1000px;
-    padding-right: 200px;
+    padding:10px 10%;
+   
     
 }
 
@@ -455,6 +538,8 @@ padding-right: 100px;
     transition: 1s ease;
 
 }
+
+
 
 .skills-content .card:hover .box{
 
@@ -519,7 +604,7 @@ padding-right: 100px;
 
 
 .projects{
-    padding:50px 0;
+    padding: 10px 10%;;
 }
 
 .Sub-title {
@@ -613,7 +698,7 @@ padding-right: 100px;
     grid-template-columns: repeat(2rem, 1fr);
     grid-gap: 5rem;
 
-    padding: 80px 0;
+    padding: 10px 10%;;
    
 }
 
@@ -702,7 +787,7 @@ form .btn {
     }
 
     header{
-        padding: 1rem 2rem;
+        padding: 10px 10%;
     }
 }
 
@@ -775,7 +860,7 @@ form .btn {
 @media (max-width:1430px)
 {
  header{
-    padding: 25px 3%;
+    padding: 10px 10%;
 
  }
 
