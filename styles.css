@@ -31,7 +31,8 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 10px 10%;
+   padding-top: 20px;
+   padding-bottom: 60px;
    
 }
 
@@ -62,6 +63,7 @@ a{
 .navbar{
     display: flex;
     list-style-type: none;
+    
     
 }
 
@@ -257,8 +259,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f7f7f7;
-    padding: 10px 10%;
+   
     width: 100%;
     
     border-bottom: 2px solid #ddd;
@@ -267,9 +268,11 @@ span{
 .tab-buttons {
     display: flex;
     align-items:center;
-    gap: 10px;
+    gap: 40px;
     cursor: pointer;
+    
 }
+
 
 
 
@@ -503,27 +506,34 @@ padding-right: 100px;
 
  .skills-content {
 
-    display: flex;
+    display:grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    height: 75vh;
-    padding-right: 20px;
-    
-    
+    grid-gap:60px;
+    height: 70vh;
+
     
 }
 
+
+.skills-heading {
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
 
  .skills-content .card{
     position: relative;
     width:290px;
     height:185px;
-    margin: 25px;
+    margin: 10px;
     transform-style: preserve-3d;
     perspective: 1000px;
-    padding:10px 10%;
+    
    
     
 }
@@ -553,6 +563,7 @@ padding-right: 100px;
     width: 100%;
     height: 100%;
 }
+
 
 .skills-content .card .box .img-box img{
     position: absolute;
@@ -604,7 +615,7 @@ padding-right: 100px;
 
 
 .projects{
-    padding: 10px 10%;;
+    padding: 10px 10%;
 }
 
 .Sub-title {
@@ -623,8 +634,7 @@ padding-right: 100px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap:60px;
     margin-top: 50px;
-    padding-left: 30px;
-    padding-right: 100px;
+   
     justify-content: center;
     align-items: center;
 }
@@ -702,6 +712,13 @@ padding-right: 100px;
    
 }
 
+.Sub-title1{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 50px;
+    
+}
+
 
 .contact-left {
     flex-basis: 35%;
@@ -742,33 +759,37 @@ padding-right: 100px;
     transform: translateY(-5px);
 }
 
-.btn {
-    display: inline-block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px #8080FF;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    background-color: #8080FF;
+
+
+ .btn2 {
+    display:flex;
+    text-align: center;
+    background: #8080FF;
     color: #fff;
+    box-shadow: 4px 4px;
+    padding: 0 40px;
+    line-height: 42px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: ease all 0.35s;
 }
 
-.contact-right form {
-    /* Take up the full width */
-}
+
 
 form input,
 form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #fff;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #000;
     font-size: 18px;
     border-radius: 6px;
+  
 }
 
 form .btn {
