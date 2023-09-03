@@ -1,10 +1,9 @@
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('header a').forEach(link => {
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('active');
-    console.log(link);
-  }
-})
+menu.onclick = () => {
 
+  menu.classList.toggle("fa-bars");
+  navbar.classList.toggle("active");
+};
 

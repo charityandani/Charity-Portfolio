@@ -38,7 +38,7 @@ header{
 
 
 .container{
-    padding:10px 10%
+    padding:10px 10%;
 }
 
 header  .bta{
@@ -58,7 +58,7 @@ a{
     font-weight: 1000;
     font-size:4rem;
     padding-right: 50px;
-    
+
 }
 .navbar{
     display: flex;
@@ -75,6 +75,20 @@ a{
     font-weight: 300;
    
     
+}
+
+
+#menu-icon{
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    color: #8080FF;
+    
+}
+
+.active{
+    background: #8080FF;
 }
 
 .navbar a:hover{
@@ -199,13 +213,6 @@ span{
 
 
 
-.menu-icon{
-    font-size: 28px;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-    
-}
 /*.about-img {
     width: 530px;
     height: auto;
@@ -881,11 +888,11 @@ form .btn {
 @media (max-width:1430px)
 {
  header{
-    padding: 10px 10%;
+    padding: 25px 3%;
 
  }
 
- secttion{
+ section{
     padding: 50px 3%;
  }
 
@@ -920,12 +927,12 @@ form .btn {
     header{
         padding:18px 3%;
     }
-    .menu-icon{
+    #menu-icon{
         display: block;
     }
     .navbar{
         position: absolute;
-        top: -500%;
+        top: -500px;
         left: 0;
         right: 0;
         display: flex;
@@ -945,20 +952,20 @@ form .btn {
         
     }
 
-    .navbar .active{
+    .navbar.active{
 
         top:100%
     }
     
 }
 
-@media (max-width:798px)
+@media (max-width:795px)
 {
 
     .home{
         grid-template-columns: 1fr;
         grid-gap: 2rem;
-        align-items: flex-start;
+        text-align: center;
         align-items: center;
         padding: 0 25px;
     
@@ -971,11 +978,10 @@ form .btn {
     .home-text p{
         font-size: 15px;
         text-align: center;
+        width: 100%;
     }
 
-    .btn {
-        margin-left: 60px;
-    }
+   
 .home-img img{
     max-width: 100%;
     margin-top: 70px;
