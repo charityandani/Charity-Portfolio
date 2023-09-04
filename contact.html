@@ -62,12 +62,41 @@
 
             <div class="contact-right">
               <form>
+                <div class="input-group">
 
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="Message" id="message" rows="6"  placeholder="Message"></textarea>
-                <button type="submit" class="btn2">Submit</button>
-              </form>
+                
+                <input type="text" name="name" placeholder="Name"  id="contact-name" onkeyup="validateName()" required >
+                <span id="name-error"></span>
+
+              
+               
+             
+
+              
+
+                <input type="phone" name="phone" placeholder="phone" id="contact-phone" onkeyup="validatePhone()" required>
+                <span id="phone-error"></span>
+              
+            
+                <input type="email" name="email" placeholder="Email" id="contact-email" onkeyup="validateEmail()" required>
+
+                <span id="email-error"></span>
+              
+
+
+            
+                <textarea name="Message" id="message" rows="4"  placeholder="Message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+             
+
+                <button onclick="return validateForm()" type="submit" class="btn2">Submit</button>
+                <span id="submit-error"></span>
+
+              </div>
+            </form>
+
+              </div>
+              
 
             </div>
 

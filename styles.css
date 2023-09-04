@@ -720,8 +720,9 @@ padding-right: 100px;
 }
 
 .Sub-title1{
-    text-align: center;
+    
     align-items: center;
+    padding-right: 20px;
     padding-bottom: 50px;
     
 }
@@ -787,7 +788,7 @@ padding-right: 100px;
 
 form input,
 form textarea {
-    width: 100%;
+    width: 75%;
     border: 0;
     outline: none;
     background: #fff;
@@ -804,6 +805,12 @@ form .btn {
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.input-group span{
+    position: relative;
+    
+    
 }
 
 
