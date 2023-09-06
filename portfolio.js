@@ -74,23 +74,3 @@ menu.onclick = () => {
   }
 
   
-  function validateMessage(){
-var message = document.getElementById("contact-message").value;
-var words= 30;
-var left = words - message.length;
-
-if(left > 0){
-
-  messageError.innerHTML = left + "more words required";
-  return false;
-}
-messageError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
-return true;
-  }
-
-  function validateForrm(){
-    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
-      submitError.innerHTML = "Please fix errors";
-      return false;
-    }
-  }
