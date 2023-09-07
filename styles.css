@@ -35,6 +35,7 @@ header{
     justify-content:space-between;
    padding-top: 20px;
    padding-bottom: 60px;
+ 
    
 }
 
@@ -257,8 +258,8 @@ span{
 
 .qualification{
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 140px;
+   
 }
 
 .title-heading{
@@ -270,6 +271,9 @@ span{
     display: flex;
 }
 
+
+
+
 .eduwork-tab {
     display: flex;
     justify-content: space-between;
@@ -278,6 +282,7 @@ span{
     width: 100%;
     
     border-bottom: 2px solid #ddd;
+   
 }
 
 .tab-buttons {
@@ -302,11 +307,7 @@ span{
 }
 
 
-.tab-buttons:hover {
-    color: #8080FF; /* Change color on hover */
-    transition: color 0.3s;
-    font-size: 40px;
-}
+
 
 
 
@@ -336,6 +337,7 @@ span{
     position: relative;
     max-width: 100%;
     margin: 100px auto;
+    
    
    
 }
@@ -371,6 +373,7 @@ span{
     
     position: relative;
     width: 45%;
+    
     animation: movedown 1s linear forwards;
     opacity: 0;
 
@@ -429,7 +432,7 @@ span{
 .container .fa-circle{
 
     position: absolute;
-    right: -75px;
+    right: -76px;
     width: 40px;
     
     border-radius: 50%;
@@ -437,7 +440,7 @@ span{
 }
 
 .right-container .fa-circle{
-    left: -25px;
+    left: -22px;
 }
 
 
@@ -480,15 +483,17 @@ span{
 
  .skills-content {
 
-    display:grid;
+    display:flex;
     
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    grid-gap:60px;
+    grid-gap:40px;
     height: 70vh;
+   
+    
 
     
 }
@@ -496,7 +501,7 @@ span{
 
 .skills-heading {
     text-align: center;
-    padding-bottom: 30px;
+   padding-bottom: 100px;
     
 }
 
@@ -603,7 +608,7 @@ span{
   
 
 .project-list{
-    display: grid;
+    display:grid;
     
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap:60px;
@@ -611,6 +616,7 @@ span{
    
     justify-content: center;
     align-items: center;
+    
 }
 
 .project-name{
@@ -717,6 +723,7 @@ span{
 .social-icons {
     margin-top: 30px;
     display: flex;
+    grid-gap: 150px;
     
 }
 
@@ -1063,7 +1070,7 @@ font-weight: 600;
         
     
        
-        width: 80%;
+        width: 100%;
       
        
        
@@ -1074,8 +1081,10 @@ font-weight: 600;
    
     #menu-icon{
         display: block;
+    
        
     }
+   
     .navbar{
         position: absolute;
         top: -500px;
@@ -1158,6 +1167,11 @@ font-weight: 600;
     
     
 }
+.about-col-1 img{
+    padding-bottom: 60px;
+   
+}
+
 .row{
     display: grid;
     justify-content: center;
@@ -1172,7 +1186,80 @@ font-weight: 600;
     font-size: 15px;
     text-align: center;
     max-width: 100%;
+    padding-top: 30px;
+   
 }
+
+.qualification{
+    
+    display: flex;
+    flex-direction: column;
+  max-width: 100%;
+   text-align: center;
+   padding-top: 80px;
+   
+}
+.title-heading{
+    
+    font-size: large;
+   
+}
+
+.journey{
+    font-size: small;
+   
+}
+.tab-buttons {
+    flex-direction: column;
+ 
+    
+   
+   
+}
+.edu-word{
+   
+    margin-right:30px;
+
+}
+
+
+
+.tab-buttons i {
+    font-size: 30px;
+    margin-right: 90px; /* Shift the icon to the right */
+}
+
+.container .fa-circle {
+    position: absolute;
+    right: -49px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 10px;
+}
+.right-container .fa-circle {
+    left: -15px;
+}
+
+
+.text-box{
+    padding: 12px 6px;
+    border-radius: 20px;
+    font-size: 9px;
+   
+    
+}
+
+
+
+form input,
+form textarea {
+    width: 100%;
+    
+  
+}
+
+
+
 
 
 
