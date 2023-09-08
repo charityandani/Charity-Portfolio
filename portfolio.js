@@ -3,9 +3,19 @@ let navbar = document.querySelector(".navbar");
 
 menu.onclick = () => {
 
-  menu.classList.toggle("fa-bars");
+  menu.classList.toggle("fa-solid");
   navbar.classList.toggle("active");
-};
+ 
+}; 
+
+
+
+
+
+
+
+
+
 
   var nameError = document.getElementById("name-error");
   var emailError = document.getElementById("email-error");

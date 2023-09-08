@@ -23,9 +23,17 @@ html{
     
 }
 
+.container{
+    padding:10px 10%;
+   
+
+   
+    
+}
+
 header{
 
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -33,19 +41,14 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-between;
-   padding-top: 20px;
-   padding-bottom: 60px;
+   padding-top: 40px;
+   background-color: #090808;
  
    
 }
 
 
-.container{
-    padding:10px 10%;
-    width: 1400px;
-   
-    
-}
+
 
 header  .bta{
     font-size: 25px;
@@ -58,7 +61,6 @@ a{
 }
 
 .logo {
-
     color:#8080FF;
     font-family: 'Notable';
     font-weight: 1000;
@@ -116,11 +118,8 @@ a{
     grid-template-columns: repeat(2,1fr);
     grid-gap: 6rem;
     align-items: center;
-    padding: 140px ;
-    padding-top: 60px;
-    
-    
-    
+    padding: 80px;
+    padding-top: 140px
     
 }
 
@@ -183,10 +182,11 @@ span{
 
 /*--------------------------new about---------------*/
 
-.row{
+.row-about{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 160px;
 }
 
 .about-col-1{
@@ -243,6 +243,10 @@ span{
     font-size: 30px; 
     font-weight: 600;
     
+}
+
+.project-container{
+    margin-top: 160px;
 }
 
 /*.about-text p{
@@ -603,7 +607,6 @@ span{
     justify-content: center; /* Center horizontally (within flex container) */
     align-items: center; /* Center vertically (within flex container) */
      /* Set height to viewport height for vertical centering */
-     padding-right: 150px;
   }
   
 
@@ -683,6 +686,17 @@ span{
 
 /*------------------Contact---------------*/
 
+.contact-container  {
+    margin-top: 160px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
 .contact {
     
     grid-template-columns: repeat(2rem, 1fr);
@@ -692,9 +706,10 @@ span{
    
 }
 
+
 .Sub-title1{
     
-    align-items: center;
+    text-align: center;
     padding-right: 20px;
     padding-bottom: 50px;
     
@@ -702,8 +717,7 @@ span{
 
 
 .contact-left {
-    flex-basis: 35%;
-    padding-right: 20px; /* Add some spacing between the two columns */
+    flex-basis: 28%;
 }
 
 .contact-right {
@@ -722,8 +736,7 @@ span{
 
 .social-icons {
     margin-top: 30px;
-    display: flex;
-    grid-gap: 150px;
+    text-align: center
     
 }
 
@@ -1066,14 +1079,9 @@ font-weight: 600;
 @media only screen and (max-width:600px){
 
 
-    .container{
-        
-    
-       
-        width: 100%;
-      
-       
-       
+    .container{     
+      width: 100%;
+        padding: 10px 3%;      
     }
 
     
@@ -1081,6 +1089,11 @@ font-weight: 600;
    
     #menu-icon{
         display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-right: 20px;
+        margin-top: 60px;        
     
        
     }
@@ -1122,9 +1135,7 @@ font-weight: 600;
         text-align: center;
         align-items: center;
         padding: 0 25px;
-      
-    
-       
+        padding-top:88px;
     }
     .home-text {
         margin-top: 70px;
@@ -1143,7 +1154,7 @@ font-weight: 600;
    
 .home-img img{
     max-width: 100%;
-    margin-top: 70px;
+   
 }
 
 
@@ -1151,6 +1162,7 @@ font-weight: 600;
 .logo{
 
     font-weight: 400;
+    position: fixed;
    
     
 }
@@ -1172,7 +1184,7 @@ font-weight: 600;
    
 }
 
-.row{
+.row-about{
     display: grid;
     justify-content: center;
   align-items: center;
@@ -1249,6 +1261,15 @@ font-weight: 600;
     
 }
 
+.contact-left {
+    flex-basis: 100%;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.contact-right{
+    flex-basis: 100%;
+}
 
 
 form input,
