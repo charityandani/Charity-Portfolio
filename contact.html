@@ -8,12 +8,24 @@
       src="https://kit.fontawesome.com/46cbf6dc64.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("zFywR529xdIxuEr03");
+})();
+</script>
     <title>Portfolio</title>
 </head>
 <body>
 
 </head>
 <body>
+
+  
+
+  </div>
    </head>
   <body>
     <header>
@@ -57,31 +69,23 @@
                 <div class="input-group">
 
                 
-                <input type="text" name="name" placeholder="Name"  id="contact-name" onkeyup="validateName()" required >
+                <input type="text" name="name" placeholder="Name" class="full-name" id="name" onkeyup="validateName()" required >
                 <span id="name-error"></span>
 
-              
-               
-             
 
-              
-
-                <input type="phone" name="phone" placeholder="phone" id="contact-phone" onkeyup="validatePhone()" required>
+                <input type="phone" name="phone" placeholder="phone" class="contact-number" id="phone" onkeyup="validatePhone()" required>
                 <span id="phone-error"></span>
               
             
-                <input type="email" name="email" placeholder="Email" id="contact-email" onkeyup="validateEmail()" required>
+                <input type="email" name="email" placeholder="Email" class="email-adddress" id="email" onkeyup="validateEmail()" required>
 
                 <span id="email-error"></span>
               
-
-
-            
-                <textarea name="Message" id="message" rows="4"  placeholder="Message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <textarea name="Message" id="message" rows="4"  placeholder="Message" class="message" id="message" onkeyup="validateMessage()"></textarea>
                 <span id="message-error"></span>
              
 
-                <button onclick="return validateForm()" type="submit" class="btn2">Submit</button>
+                <button type="submit" class="btn2 " onclick="sendMail()">Submit</button>
                 <span id="submit-error"></span>
 
               </div>
@@ -96,6 +100,9 @@
 
         </div>
       </section>
+
+
+      
 
       <script src="portfolio.js"></script>
     

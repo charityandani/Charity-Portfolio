@@ -8,15 +8,7 @@ menu.onclick = () => {
  
 }; 
 
-
-
-
-
-
-
-
-
-
+//FORM VALIDATION
   var nameError = document.getElementById("name-error");
   var emailError = document.getElementById("email-error");
   var phoneError = document.getElementById("phone-error");
@@ -25,13 +17,13 @@ menu.onclick = () => {
 
   function validateName(){
 
-    var name=document.getElementById("contact-name").value;
-    if(name.length==0)
+    var nameContact=document.getElementById("name").value;
+    if(nameContact.length==0)
     {
       nameError.innerHTML = "Required";
       return false;
     }
-    if(!name.match(/^[A-Za-z]+ [A-Za-z]+$/)){
+    if(!nameContact.match(/^[A-Za-z]+ [A-Za-z]+$/)){
 
       nameError.innerHTML = "write full name";
       return false;
@@ -44,16 +36,16 @@ menu.onclick = () => {
 
   function validatePhone(){
 
-    var phone = document.getElementById("contact-phone").value;
-    if(phone.length==0){
+    var phoneContact = document.getElementById("phone").value;
+    if(phoneContact.length==0){
       phoneError.innerHTML = "required"
       return false;
     }
-    if(phone.length!==10){
+    if(phoneContact.length!==10){
       phoneError.innerHTML = "10 digits required";
       return false;
     }
-    if(!phone.match(/^[0-9]{10}$/)){
+    if(!phoneContact.match(/^[0-9]{10}$/)){
 
       phoneError.innerHTML = "only numbers please";
       return false;
@@ -67,20 +59,49 @@ menu.onclick = () => {
 
   function validateEmail(){
 
-    var email = document.getElementById("contact-email").value;
+    var emailContact = document.getElementById("email").value;
 
 
-    if(email.length==0){
+    if(emailContact.length==0){
       emailError.innerHTML = "Email is required";
       return false;
     }
-    if(!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
+    if(!emailContact.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
 
       emailError.innerHTML = "Email Invalid";
       return false;
     }
     emailError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
     return true;
-  }
+  };
 
   
+  //EMAIL JS
+
+
+  function sendMail() {
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+  
+   
+ const serviceID = "service_1x4iyaf";
+ const templateID = "template_hcdklbl";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+        
+      })
+    
+      .catch(err=>console.log(err));
+      alert("Your message sent successfully!!");
+   
+  }
+
+
