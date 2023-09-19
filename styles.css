@@ -26,8 +26,6 @@ html{
 .container{
     padding:10px 10%;
    
-
-   
     
 }
 
@@ -1034,7 +1032,14 @@ form textarea {
 
     .container{
         
-        width: 100%px;
+        width: 100%;
+        
+       
+    }
+    
+    .container-image{
+        
+        margin-top: 30px;
         
        
     }
