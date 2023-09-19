@@ -16,6 +16,8 @@
   emailjs.init("zFywR529xdIxuEr03");
 })();
 </script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -56,8 +58,8 @@
               <p><i class="fa-solid fa-envelope"></i>charityandani.1@gmail.com</p>
       
               <div class="social-icons">
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/andani-rananga-439085162/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/charityandani?tab=repositories"><i class="fa-brands fa-github"></i></a>
                
 
               </div>
@@ -65,7 +67,7 @@
             </div>
 
             <div class="contact-right">
-              <form class="contact-me">
+              <form class="contact-me" id="myform">
                 <div class="input-group">
 
                 
@@ -81,11 +83,13 @@
 
                 <span id="email-error"></span>
               
-                <textarea name="Message" id="message" rows="4"  placeholder="Message" class="message" id="message" onkeyup="validateMessage()"></textarea>
+                <textarea name="Message" id="message" rows="4"  placeholder="Message" class="message" id="message" onkeyup="validateMessage()" required></textarea>
                 <span id="message-error"></span>
+
+               <div class="g-recaptcha" data-sitekey="6Le9FCUoAAAAAM1AZpsXGU1OIC3c_CM7eZd5iquE"></div>
              
 
-                <button type="submit" class="btn2 " onclick="sendMail()">Submit</button>
+                <button type="submit" class="btn2 " onclick="sendMail() ; return validateForm()">Submit</button>
                 <span id="submit-error"></span>
 
               </div>
