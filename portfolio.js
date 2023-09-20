@@ -8,54 +8,60 @@ menu.onclick = () => {
  
 }; 
 
+
+
+
+
+
 //FORM VALIDATION
-  var nameError = document.getElementById("name-error");
-  var emailError = document.getElementById("email-error");
-  var phoneError = document.getElementById("phone-error");
-  var messageError = document.getElementById("message-error");
-  var submitError = document.getElementById("submit-error");
+var nameError = document.getElementById("name-error");
+var emailError = document.getElementById("email-error");
+var phoneError = document.getElementById("phone-error");
+var messageError = document.getElementById("message-error");
+var submitError = document.getElementById("submit-error");
 
-  function validateName(){
+function validateName(){
 
-    var nameContact=document.getElementById("name").value;
-    if(nameContact.length==0)
-    {
-      nameError.innerHTML = "Required";
-      return false;
-    }
-    if(!nameContact.match(/^[A-Za-z]+ [A-Za-z]+$/)){
+  var nameContact=document.getElementById("name").value;
+  if(nameContact.length==0)
+  {
+    nameError.innerHTML = "Required";
+    return false;
+  }
+  if(!nameContact.match(/^[A-Za-z]+ [A-Za-z]+$/)){
 
-      nameError.innerHTML = "write full name";
-      return false;
-    }
-
-    nameError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
-    return true;
-     
+    nameError.innerHTML = "write full name";
+    return false;
   }
 
-  function validatePhone(){
+  nameError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+   
+}
 
-    var phoneContact = document.getElementById("phone").value;
-    if(phoneContact.length==0){
-      phoneError.innerHTML = "required"
-      return false;
-    }
-    if(phoneContact.length!==10){
-      phoneError.innerHTML = "10 digits required";
-      return false;
-    }
-    if(!phoneContact.match(/^[0-9]{10}$/)){
+function validatePhone(){
 
-      phoneError.innerHTML = "only numbers please";
-      return false;
-    }
-
-    phoneError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
-    return true;
-
-
+  var phoneContact = document.getElementById("phone").value;
+  if(phoneContact.length==0){
+    phoneError.innerHTML = "required"
+    return false;
   }
+  if(phoneContact.length!==10){
+    phoneError.innerHTML = "10 digits required";
+    return false;
+  }
+  if(!phoneContact.match(/^[0-9]{10}$/)){
+
+    phoneError.innerHTML = "only numbers please";
+    return false;
+  }
+
+  phoneError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+
+
+}
+
 
   function validateEmail(){
 
@@ -79,7 +85,7 @@ menu.onclick = () => {
   function validateMessage(){
 
       var messageContact = document.getElementById("message").value;
-      var required = 10;
+      var required = 5;
       var left = required - messageContact.length;
 
       if(left > 0){
@@ -100,6 +106,34 @@ menu.onclick = () => {
      return false;
     }
   }
+
+
+        
+  function enableSubmitButton() {
+    document.getElementById('submit').disabled = false;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (!recaptchaResponse) {
+      alert('Please complete the reCAPTCHA before submitting the form.');
+    } else {
+      // reCAPTCHA is completed, you can send the email here
+      sendMail();
+    }
+  }
+
+  document.getElementById('form').addEventListener('submit', handleSubmit);
+
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6Le9FCUoAAAAAM1AZpsXGU1OIC3c_CM7eZd5iquE', { action: 'submit' }).then(enableSubmitButton);
+  });
+  
+
+
   
   //EMAIL JS
   function sendMail() {
@@ -107,6 +141,7 @@ menu.onclick = () => {
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var message = document.getElementById("message").value;
+   
   
     // Check if any of the fields is empty
     if (name.trim() === "" || phone.trim()=="" || email.trim() === "" || message.trim() === "") {
@@ -151,41 +186,3 @@ menu.onclick = () => {
   
 
   
-
-
-  //RECAPTCHA
- //Recaptcha validation
- const express = require('express'); 
-        const bodyParser = require('body-parser');
-        const fetch = require('node-fetch');
-        
-        const app = express();
-        app.use(bodyParser.urlencoded({ extended: false }));
-        app.use(bodyParser.json());
-        
-        app.post('/submit-form', async (req, res) => {
-          const { recaptchaToken } = req.body;
-        
-          // Verify the reCAPTCHA token with Google
-          const secretKey = '6Le9FCUoAAAAAGS68kie4qvn5Ah8tci0JoesjZ6R'; 
-          const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
-        
-          const response = await fetch(verificationUrl, { method: 'POST' });
-          const data = await response.json();
-        
-          if (data.success) {
-            // reCAPTCHA verification passed; process the form submission
-            // Your email sending logic should go here
-            res.send('Form submitted successfully!');
-          } else {
-            // reCAPTCHA verification failed
-            res.status(400).send('reCAPTCHA verification failed.');
-          }
-        });
-        
-        app.listen(3000, () => {
-          console.log('Server is running on port 3000');
-        });  
-        
-      
-
