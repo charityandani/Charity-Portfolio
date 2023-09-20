@@ -124,8 +124,9 @@ a{
 .home-img img{
 
     max-width: 100%;
-    width: 800px;
+    width: 480px;
     height: auto;
+    margin-top: 110px;
 }
 
 .home-text h1{
@@ -848,7 +849,9 @@ form .btn {
    
 .home-img img{
     max-width: 100%;
-    margin-bottom: 30px;
+    width: 480px;
+    height: auto;
+    margin-top: -6px;
    
 }
 
