@@ -105,6 +105,21 @@ a{
     transition: 3s;
 }
 
+
+.submenu{
+    list-style-type: none;
+   
+    border-top: 3px solid #8080FF;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+.submenu:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
 /*---------------HOME-----------------*/
 
 
@@ -875,6 +890,10 @@ form .btn {
 
     
     
+}
+
+.dropdown-menu{
+    position: absolute;
 }
 .about-col-1 img{
     padding-bottom: 60px;
