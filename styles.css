@@ -782,7 +782,24 @@ form .btn {
 }
 
 
+@media only screen and (max-width:320px)
+{
 
+
+    .contact-left p {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    form input,
+    form textarea {
+        width: 80%;
+        
+      
+    
+    }
+    
+
+}
 
 
 
@@ -1005,21 +1022,6 @@ form textarea {
     width: 100%;
     
   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
