@@ -246,15 +246,6 @@ span{
 
 
 
-/*.about-img {
-    width: 530px;
-    height: auto;
-    padding-right: 150px;
-    
-    
-    
-}*/
-
 
 .about-text{
 
@@ -900,21 +891,27 @@ form .btn {
     
 }
 
-.navbar li .submenu {
+.submenu {
     display: none;
-    visibility: hidden;
-    opacity: 0;
+    border-top: none;
 }
 
-.navbar li:hover .submenu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
+.fa-solid.fa-caret-down {
+    display: none;
 }
+
+li a[href="#qualification-section"],
+    li a[href="#skills-section"] {
+        display: none;
+    }
+
+
+
 .about-col-1 img{
-    display: none;
+    
+   width: 75%;
+   padding-bottom: 60px;
 }
-
 .row-about{
     display: grid;
     justify-content: center;
